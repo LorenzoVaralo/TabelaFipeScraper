@@ -68,18 +68,16 @@ def perform_web_requests(addresses, suffix):
 base_url = 'https://parallelum.com.br/fipe/api/v1/carros/marcas'
 
 response = perform_web_requests([base_url], '/modelos')
-print('RESPONSE 1')
+print('RESPONSE 1 ✔️')
 
 response2 = perform_web_requests(response, '/anos')
-print('RESPONSE 2')
+print('RESPONSE 2 ✔️')
 
 response3 = perform_web_requests(response2, '')
-
-print('RESPONSE 3')
+print('RESPONSE 3 ✔️')
 
 response4 = perform_web_requests(response3, 'GET_PRICES')
-
-print('RESPONSE 4')
+print('RESPONSE 4 ✔️')
 
 con = sqlite3.connect('database')
 
