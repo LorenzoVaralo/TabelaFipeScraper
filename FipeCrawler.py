@@ -79,7 +79,7 @@ print('RESPONSE 3 ✔️')
 response4 = perform_web_requests(response3, 'GET_PRICES')
 print('RESPONSE 4 ✔️')
 
-con = sqlite3.connect('database')
+con = sqlite3.connect('database.db')
 
 curr = con.cursor()
 
