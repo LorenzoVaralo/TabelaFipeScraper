@@ -2,9 +2,12 @@ import sqlite3
 import requests
 import json
 import ast
+import os
 import multiprocessing
 import queue
 from threading import Thread
+
+DIRECTORY_PATH = os.path.abspath(os.path.dirname(__file__))
 
 def treat_resp(url, resp, suffix):
     lista = []
@@ -79,7 +82,7 @@ print('RESPONSE 3 ✔️')
 response4 = perform_web_requests(response3, 'GET_PRICES')
 print('RESPONSE 4 ✔️')
 
-con = sqlite3.connect('database.db')
+con = sqlite3.connect(os.path.join(DIRECTORY_PATH, 'database.db'))
 
 curr = con.cursor()
 
